@@ -32,11 +32,11 @@ public class userService {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.hasChild("user/" + user.getUid())) {
                     //User Exists , No Need To add new data.
-                    Toast.makeText(mContext, "1", Toast.LENGTH_LONG).show();
+                    Toast.makeText(mContext, "not a new user", Toast.LENGTH_LONG).show();
                     //Get previous data from firebase. It will take previous data as soon as possible..
                     return;
                 } else {
-                    Toast.makeText(mContext, "2", Toast.LENGTH_LONG).show();
+                    Toast.makeText(mContext, "a new user", Toast.LENGTH_LONG).show();
                     FirebaseDatabase.getInstance().getReference().child("user/" + user.getUid()).setValue(userModel);
                 }
             }
