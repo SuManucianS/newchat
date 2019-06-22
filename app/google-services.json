@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "254507923418",
-    "firebase_url": "https://chatapp-6d381.firebaseio.com",
-    "project_id": "chatapp-6d381",
-    "storage_bucket": "chatapp-6d381.appspot.com"
+    "project_number": "977936897834",
+    "firebase_url": "https://chattingapp214.firebaseio.com",
+    "project_id": "chattingapp214",
+    "storage_bucket": "chattingapp214.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:254507923418:android:a106030d1f0f5e70",
+        "mobilesdk_app_id": "1:977936897834:android:b9c5ba9d6224ec56",
         "android_client_info": {
-          "package_name": "com.example.chatrealtime"
+          "package_name": "com.example.chatapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "254507923418-mq5shj8l1b4mhscgvj5cbgfusjsf6rqk.apps.googleusercontent.com",
+          "client_id": "977936897834-n83tmchp60jg4cqg2klgep3nq0sgsi2c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.chatrealtime",
-            "certificate_hash": "e2ac4b479dce33f1e22592ab90b42c4683f35a34"
+            "package_name": "com.example.chatapplication",
+            "certificate_hash": "6a5738a6b493e50dad6715a9e0faaedcacfa2175"
           }
         },
         {
-          "client_id": "254507923418-57k63a5rp344mqhshsd8t1l5rat0n5kj.apps.googleusercontent.com",
+          "client_id": "977936897834-aathfhjngoa1mpm3j3sldu3e3k275edd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAkpSRBwyB81dMOAvrisMpSDMw0klr6qFk"
+          "current_key": "AIzaSyDdQz3sgE0dzpkXbgmkwt5A9836d4K6FU8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "254507923418-57k63a5rp344mqhshsd8t1l5rat0n5kj.apps.googleusercontent.com",
+              "client_id": "977936897834-aathfhjngoa1mpm3j3sldu3e3k275edd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

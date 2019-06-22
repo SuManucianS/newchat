@@ -1,4 +1,4 @@
-package com.example.chatrealtime;
+package com.example.chatapplication;
 
 import org.junit.Test;
 

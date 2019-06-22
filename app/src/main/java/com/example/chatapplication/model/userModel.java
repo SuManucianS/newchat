@@ -1,16 +1,16 @@
-package com.example.chatrealtime.Model;
+package com.example.chatapplication.model;
 
-public class User {
+public class userModel {
     private String id, username, imageURL, status;
 
-    public User(String id, String username, String imageURL, String status) {
+    public userModel() {
+    }
+
+    public userModel(String id, String username, String imageURL, String status) {
         this.id = id;
         this.username = username;
         this.imageURL = imageURL;
         this.status = status;
-    }
-    public User(){
-
     }
 
     public String getId() {

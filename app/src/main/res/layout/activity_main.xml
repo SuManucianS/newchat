@@ -5,26 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="20dp"
-    tools:context=".StartActivity">
+    tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chat App!"
-        android:textStyle="bold"
-        android:textSize="24dp"/>
-    <Button
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/btnlogin"/>
+        android:hint="email" />
+
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Create"
-        android:id="@+id/btncreate"/>
+        android:padding="15dp"
+        android:text="send" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btnGoogleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.google.android.gms.common.SignInButton>
 
 </LinearLayout>

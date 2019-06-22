@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chatrealtime">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.chatapplication">
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -10,11 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MessageActivity"></activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".StartActivity">
+        <activity android:name=".system.registerActivity"></activity>
+        <activity android:name=".system.loginActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +21,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+
 </manifest>
