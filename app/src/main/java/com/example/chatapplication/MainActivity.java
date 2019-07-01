@@ -1,48 +1,45 @@
 package com.example.chatapplication;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.chatapplication.services.googleSignInService;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.Task;
+import com.example.chatapplication.system.loginActivity;
 
-public class MainActivity extends AppCompatActivity {
-    TextView tvresult;
-    Button btnsend;
-    EditText txtemail;
-    SignInButton signInButton;
-    googleSignInService gsis;
+public class MainActivity extends Activity {
+    Button btnsend, btnout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window w = getWindow();
+            w.requestFeature(Window.FEATURE_NO_TITLE);
+            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
         setContentView(R.layout.activity_main);
-        gsis = new googleSignInService(this, getString(R.string.default_web_client_id));
-        tvresult = (TextView) findViewById(R.id.tvResult);
-        btnsend = (Button) findViewById(R.id.btnSend);
-        txtemail = (EditText) findViewById(R.id.txtEmail);
-        signInButton = (SignInButton) findViewById(R.id.btnGoogleButton);
-        signInButton.setOnClickListener(v -> blah());
+        btnsend = (Button) findViewById(R.id.btnLogin);
+        btnout = (Button) findViewById(R.id.btnOut);
+        btnsend.setOnClickListener(v -> toLogin());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            btnout.setOnClickListener(v -> finishAndRemoveTask());
+        } else {
+            btnout.setOnClickListener(v -> finish());
+        }
+    }
+
+    private void toLogin() {
+        Intent intent = new Intent(this, loginActivity.class);
+        startActivity(intent);
     }
 
     public void blah() {
-        Intent intent = new Intent(gsis.mGoogleSignInClient.getSignInIntent());
-        startActivityForResult(intent, 101);
+
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        gsis.handleResult(requestCode,resultCode,data,this);
-    }
 }

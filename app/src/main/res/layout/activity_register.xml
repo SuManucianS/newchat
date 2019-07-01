@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -28,12 +27,12 @@
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_margin="20dp"
+            android:layout_margin="?actionBarSize"
             android:background="@mipmap/chat"
             android:backgroundTint="@android:color/white" />
 
         <EditText
-            android:id="@+id/etLoginPassword"
+            android:id="@+id/etRegisterFullname"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="20dp"
@@ -51,7 +50,7 @@
             android:layout_height="?actionBarSize"
             android:layout_margin="20dp"
             android:background="@drawable/rounded_conner"
-            android:hint="Email / Phone"
+            android:hint="Email"
             android:paddingStart="10dp"
             android:paddingLeft="10dp"
             android:textColor="@android:color/white"

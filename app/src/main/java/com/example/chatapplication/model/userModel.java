@@ -1,16 +1,19 @@
 package com.example.chatapplication.model;
 
-public class userModel {
-    private String id, username, imageURL, status;
+import java.io.Serializable;
+
+public class userModel implements Serializable {
+    private String id, username, imageURL, status, state;
 
     public userModel() {
     }
 
-    public userModel(String id, String username, String imageURL, String status) {
+    public userModel(String id, String username, String imageURL, String status, String state) {
         this.id = id;
         this.username = username;
         this.imageURL = imageURL;
         this.status = status;
+        this.state = state;
     }
 
     public String getId() {
@@ -43,5 +46,13 @@ public class userModel {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

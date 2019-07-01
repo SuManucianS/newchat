@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4"
+            android:layout_weight="6"
             android:scaleType="centerCrop"
             android:src="@drawable/login_background" />
 
@@ -33,7 +33,7 @@
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:layout_margin="20dp"
+            android:layout_margin="?actionBarSize"
             android:background="@mipmap/chat"
             android:backgroundTint="@android:color/white" />
 
@@ -45,13 +45,32 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btnGoogleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:visibility="gone">
+
+        </com.google.android.gms.common.SignInButton>
+
+        <Button
+            android:id="@+id/btnLoginPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/rounded_conner_btn"
+            android:backgroundTint="@android:color/white"
+            android:text="Login with phone number"
+            android:visibility="gone" />
+
         <EditText
             android:id="@+id/etLoginUsername"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:layout_margin="20dp"
             android:background="@drawable/rounded_conner"
-            android:hint="Email / Phone"
+            android:hint="Email"
             android:paddingStart="10dp"
             android:paddingLeft="10dp"
             android:textColor="@android:color/white"
@@ -72,15 +91,35 @@
             android:textColorHint="#eee"
             android:textSize="17sp" />
 
-        <Button
-            android:id="@+id/btnLoginSignIn"
-            android:layout_width="125dp"
-            android:layout_height="35dp"
-            android:background="@drawable/rounded_conner_btn"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="sign in"
-            android:textColor="@android:color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLoginSignIn"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rounded_conner_btn"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="sign in"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btnLoginOtherMethod"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/rounded_conner_btn"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Other Method"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvLoginForgot"
@@ -89,6 +128,7 @@
             android:layout_marginTop="20dp"
             android:text="Forgot Password?"
             android:textColor="@android:color/white" />
+
     </LinearLayout>
 
     <LinearLayout
